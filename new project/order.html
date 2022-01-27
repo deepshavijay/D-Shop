@@ -1,0 +1,907 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Admin Panel</title>
+
+    <!-- poppins font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- style -->
+    <link href="order.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-light fixed-top">
+        <div class="container-fluid">
+          <div class="nav-wraper">
+            <a class="navbar-brand" href="#">
+              <img src="	https://kafene-dashboard-vimaleurakaa.vercel.app/assets/logo.png" alt="" width="24" height="28" class="d-inline-block align-top">
+              <span>Kafene</span>
+            </a>
+            <div>
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link active" href="./order.html">Orders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./product.html">Products</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./user.html">Users</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="logout">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" id="logout">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="orders_container">
+        <div class="container">
+          <div class="row">
+            <h1 class="title">Orders</h1>
+            <div class="col-2 filter_wraper">
+              <h3>Filters</h3>
+              <div class="count">
+                <span>Count: </span><span class="ordersCount">100</span>
+              </div>
+              <div class="filter_input">
+                <label class="filer_checkbox">
+                  <input type="checkbox" class="filter_check" value="New" checked="">
+                  New
+                </label>
+                <label class="filer_checkbox">
+                  <input type="checkbox" class="filter_check" value="Packed" checked="">
+                  Packed
+                </label>
+                <label class="filer_checkbox">
+                  <input type="checkbox" class="filter_check" value="InTransit" checked="">
+                  InTransit
+                </label>
+                <label class="filer_checkbox">
+                  <input type="checkbox" class="filter_check" value="Delivered" checked="">
+                  Delivered
+                </label>
+              </div>
+            </div>
+            <div class="col-10">
+              <table style="width: 100%" class="" id="table">
+                <tbody><tr>
+                  <th>ID</th>
+                  <th>Customer</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+                </tbody><tbody class="table_body" id="ordersBody"><tr>
+    <td class="grey_text">714-69-5617</td>
+    <td class="dark_text">Sally Whebell</td>
+    <td class="dark_text">07-Aug-2020<br>
+        <span class="grey_text">2:29 AM</span>
+    </td>
+    <td class="grey_text">$634.2</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">752-42-3160</td>
+    <td class="dark_text">Emmery Grizard</td>
+    <td class="dark_text">11-Mar-2020<br>
+        <span class="grey_text">3:14 PM</span>
+    </td>
+    <td class="grey_text">$518.23</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">671-99-4274</td>
+    <td class="dark_text">Alano Carnaman</td>
+    <td class="dark_text">09-Oct-2020<br>
+        <span class="grey_text">11:41 AM</span>
+    </td>
+    <td class="grey_text">$400.34</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">359-13-4724</td>
+    <td class="dark_text">Huey Coombes</td>
+    <td class="dark_text">16-Nov-2020<br>
+        <span class="grey_text">6:35 PM</span>
+    </td>
+    <td class="grey_text">$559.06</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">302-50-0415</td>
+    <td class="dark_text">Rex Pilsworth</td>
+    <td class="dark_text">26-Feb-2020<br>
+        <span class="grey_text">2:02 PM</span>
+    </td>
+    <td class="grey_text">$347.03</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">332-24-5988</td>
+    <td class="dark_text">Lou Udale</td>
+    <td class="dark_text">25-Jun-2020<br>
+        <span class="grey_text">11:41 PM</span>
+    </td>
+    <td class="grey_text">$645.82</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">239-32-6080</td>
+    <td class="dark_text">Penni Blight</td>
+    <td class="dark_text">30-May-2020<br>
+        <span class="grey_text">8:15 PM</span>
+    </td>
+    <td class="grey_text">$472.53</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">579-80-0751</td>
+    <td class="dark_text">Elberta Farress</td>
+    <td class="dark_text">25-Jun-2020<br>
+        <span class="grey_text">4:42 PM</span>
+    </td>
+    <td class="grey_text">$774.63</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">494-62-5297</td>
+    <td class="dark_text">Danya Regan</td>
+    <td class="dark_text">27-May-2020<br>
+        <span class="grey_text">6:33 AM</span>
+    </td>
+    <td class="grey_text">$785.02</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">373-65-1146</td>
+    <td class="dark_text">Alexandros Fiddyment</td>
+    <td class="dark_text">15-Mar-2020<br>
+        <span class="grey_text">12:42 AM</span>
+    </td>
+    <td class="grey_text">$461.99</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">649-95-4216</td>
+    <td class="dark_text">Nissy Dalglish</td>
+    <td class="dark_text">22-Dec-2019<br>
+        <span class="grey_text">5:08 AM</span>
+    </td>
+    <td class="grey_text">$252.63</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">894-10-3976</td>
+    <td class="dark_text">Bea Axton</td>
+    <td class="dark_text">15-Jul-2020<br>
+        <span class="grey_text">1:13 PM</span>
+    </td>
+    <td class="grey_text">$858.28</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">428-94-1137</td>
+    <td class="dark_text">Jessa Simonazzi</td>
+    <td class="dark_text">15-Apr-2020<br>
+        <span class="grey_text">8:07 PM</span>
+    </td>
+    <td class="grey_text">$160.34</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">570-52-1029</td>
+    <td class="dark_text">Starla Sokell</td>
+    <td class="dark_text">14-Sep-2020<br>
+        <span class="grey_text">4:31 PM</span>
+    </td>
+    <td class="grey_text">$284.2</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">554-48-1084</td>
+    <td class="dark_text">Neall Dignam</td>
+    <td class="dark_text">14-Oct-2020<br>
+        <span class="grey_text">9:40 AM</span>
+    </td>
+    <td class="grey_text">$488.36</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">884-46-1509</td>
+    <td class="dark_text">Chalmers Blenkin</td>
+    <td class="dark_text">30-Jul-2020<br>
+        <span class="grey_text">8:43 PM</span>
+    </td>
+    <td class="grey_text">$573.95</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">332-35-8902</td>
+    <td class="dark_text">Poul Fitt</td>
+    <td class="dark_text">15-Mar-2020<br>
+        <span class="grey_text">7:30 AM</span>
+    </td>
+    <td class="grey_text">$120.68</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">707-70-7443</td>
+    <td class="dark_text">Arley Latta</td>
+    <td class="dark_text">06-Mar-2020<br>
+        <span class="grey_text">2:20 PM</span>
+    </td>
+    <td class="grey_text">$521.53</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">473-54-1808</td>
+    <td class="dark_text">Craggy Bartlett</td>
+    <td class="dark_text">25-Aug-2020<br>
+        <span class="grey_text">7:27 AM</span>
+    </td>
+    <td class="grey_text">$365.03</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">310-09-2255</td>
+    <td class="dark_text">Bradly Rawdall</td>
+    <td class="dark_text">13-Jul-2020<br>
+        <span class="grey_text">7:31 PM</span>
+    </td>
+    <td class="grey_text">$328.5</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">804-30-6450</td>
+    <td class="dark_text">Yetty Le Clercq</td>
+    <td class="dark_text">30-Apr-2020<br>
+        <span class="grey_text">9:16 AM</span>
+    </td>
+    <td class="grey_text">$683.4</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">646-89-1319</td>
+    <td class="dark_text">Napoleon Freed</td>
+    <td class="dark_text">01-Nov-2020<br>
+        <span class="grey_text">12:37 AM</span>
+    </td>
+    <td class="grey_text">$832.86</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">695-34-8159</td>
+    <td class="dark_text">Caspar Lauder</td>
+    <td class="dark_text">11-May-2020<br>
+        <span class="grey_text">1:18 PM</span>
+    </td>
+    <td class="grey_text">$616.89</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">330-63-5674</td>
+    <td class="dark_text">Simeon Vader</td>
+    <td class="dark_text">30-Sep-2020<br>
+        <span class="grey_text">10:09 AM</span>
+    </td>
+    <td class="grey_text">$806.82</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">467-31-0696</td>
+    <td class="dark_text">Nani Habeshaw</td>
+    <td class="dark_text">04-Apr-2020<br>
+        <span class="grey_text">6:30 PM</span>
+    </td>
+    <td class="grey_text">$255.1</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">125-52-1332</td>
+    <td class="dark_text">Gage Bentjens</td>
+    <td class="dark_text">04-Aug-2020<br>
+        <span class="grey_text">7:13 PM</span>
+    </td>
+    <td class="grey_text">$136.04</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">498-49-5397</td>
+    <td class="dark_text">Murry Gilffillan</td>
+    <td class="dark_text">23-Nov-2020<br>
+        <span class="grey_text">8:24 AM</span>
+    </td>
+    <td class="grey_text">$451.15</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">365-84-9783</td>
+    <td class="dark_text">Coralyn Shallo</td>
+    <td class="dark_text">10-Jul-2020<br>
+        <span class="grey_text">8:49 AM</span>
+    </td>
+    <td class="grey_text">$222.68</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">421-90-7416</td>
+    <td class="dark_text">Alanna Lambarth</td>
+    <td class="dark_text">01-Dec-2019<br>
+        <span class="grey_text">6:32 PM</span>
+    </td>
+    <td class="grey_text">$384.82</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">691-38-8727</td>
+    <td class="dark_text">Miles Clere</td>
+    <td class="dark_text">18-Oct-2020<br>
+        <span class="grey_text">3:49 AM</span>
+    </td>
+    <td class="grey_text">$709.26</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">208-16-7957</td>
+    <td class="dark_text">Demetri Casterton</td>
+    <td class="dark_text">01-Oct-2020<br>
+        <span class="grey_text">8:51 PM</span>
+    </td>
+    <td class="grey_text">$754.3</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">532-89-1725</td>
+    <td class="dark_text">Dillon Fulk</td>
+    <td class="dark_text">28-Jan-2020<br>
+        <span class="grey_text">8:12 PM</span>
+    </td>
+    <td class="grey_text">$968.06</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">655-29-5203</td>
+    <td class="dark_text">Lewie Thormwell</td>
+    <td class="dark_text">06-Feb-2020<br>
+        <span class="grey_text">4:03 AM</span>
+    </td>
+    <td class="grey_text">$560.52</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">590-02-8044</td>
+    <td class="dark_text">Corrie Guiver</td>
+    <td class="dark_text">26-Jul-2020<br>
+        <span class="grey_text">10:02 AM</span>
+    </td>
+    <td class="grey_text">$749.12</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">757-40-2243</td>
+    <td class="dark_text">Vasily Oliffe</td>
+    <td class="dark_text">07-Feb-2020<br>
+        <span class="grey_text">7:21 PM</span>
+    </td>
+    <td class="grey_text">$776.95</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">733-23-3630</td>
+    <td class="dark_text">Grayce Wilks</td>
+    <td class="dark_text">18-Jun-2020<br>
+        <span class="grey_text">3:33 AM</span>
+    </td>
+    <td class="grey_text">$726.31</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">693-55-4620</td>
+    <td class="dark_text">Carlen Havile</td>
+    <td class="dark_text">07-Oct-2020<br>
+        <span class="grey_text">1:58 AM</span>
+    </td>
+    <td class="grey_text">$791.06</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">512-02-7788</td>
+    <td class="dark_text">Stanfield Byng</td>
+    <td class="dark_text">18-May-2020<br>
+        <span class="grey_text">8:25 PM</span>
+    </td>
+    <td class="grey_text">$790.52</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">601-69-0456</td>
+    <td class="dark_text">Woodrow Vedeshkin</td>
+    <td class="dark_text">18-Sep-2020<br>
+        <span class="grey_text">11:29 AM</span>
+    </td>
+    <td class="grey_text">$918.77</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">689-31-8952</td>
+    <td class="dark_text">Bonni Caple</td>
+    <td class="dark_text">12-Aug-2020<br>
+        <span class="grey_text">7:55 AM</span>
+    </td>
+    <td class="grey_text">$391.5</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">136-79-2453</td>
+    <td class="dark_text">Talya Pawel</td>
+    <td class="dark_text">05-Dec-2019<br>
+        <span class="grey_text">9:35 AM</span>
+    </td>
+    <td class="grey_text">$959.22</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">577-64-1884</td>
+    <td class="dark_text">Carolyne Srawley</td>
+    <td class="dark_text">07-Apr-2020<br>
+        <span class="grey_text">9:27 AM</span>
+    </td>
+    <td class="grey_text">$717.27</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">685-23-3805</td>
+    <td class="dark_text">Andie Mumbeson</td>
+    <td class="dark_text">12-Jan-2020<br>
+        <span class="grey_text">11:50 AM</span>
+    </td>
+    <td class="grey_text">$671.21</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">360-20-2585</td>
+    <td class="dark_text">Briney Ollcott</td>
+    <td class="dark_text">29-Mar-2020<br>
+        <span class="grey_text">4:46 PM</span>
+    </td>
+    <td class="grey_text">$108.35</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">792-70-1148</td>
+    <td class="dark_text">Mariejeanne Bouts</td>
+    <td class="dark_text">14-Jan-2020<br>
+        <span class="grey_text">7:42 AM</span>
+    </td>
+    <td class="grey_text">$835.82</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">524-37-5761</td>
+    <td class="dark_text">Waverley Back</td>
+    <td class="dark_text">08-Apr-2020<br>
+        <span class="grey_text">2:50 PM</span>
+    </td>
+    <td class="grey_text">$231.9</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">380-26-8068</td>
+    <td class="dark_text">Chelsea Rulten</td>
+    <td class="dark_text">16-May-2020<br>
+        <span class="grey_text">5:31 PM</span>
+    </td>
+    <td class="grey_text">$860.29</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">502-45-9639</td>
+    <td class="dark_text">Monroe Hollier</td>
+    <td class="dark_text">23-Jul-2020<br>
+        <span class="grey_text">3:20 PM</span>
+    </td>
+    <td class="grey_text">$975.07</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">690-56-9672</td>
+    <td class="dark_text">Urbano Pinock</td>
+    <td class="dark_text">05-Feb-2020<br>
+        <span class="grey_text">3:55 PM</span>
+    </td>
+    <td class="grey_text">$700.13</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">325-03-7416</td>
+    <td class="dark_text">Dimitri Rodrigo</td>
+    <td class="dark_text">22-Jun-2020<br>
+        <span class="grey_text">10:43 AM</span>
+    </td>
+    <td class="grey_text">$479.77</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">449-84-3649</td>
+    <td class="dark_text">Nester Syred</td>
+    <td class="dark_text">15-Jun-2020<br>
+        <span class="grey_text">7:21 PM</span>
+    </td>
+    <td class="grey_text">$440.58</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">636-96-2864</td>
+    <td class="dark_text">Ric Hearsey</td>
+    <td class="dark_text">05-Apr-2020<br>
+        <span class="grey_text">9:29 PM</span>
+    </td>
+    <td class="grey_text">$368.14</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">439-27-9521</td>
+    <td class="dark_text">Colly Woollam</td>
+    <td class="dark_text">15-Aug-2020<br>
+        <span class="grey_text">4:40 PM</span>
+    </td>
+    <td class="grey_text">$352.22</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">179-19-2213</td>
+    <td class="dark_text">Ardath Diaper</td>
+    <td class="dark_text">07-Jun-2020<br>
+        <span class="grey_text">5:44 AM</span>
+    </td>
+    <td class="grey_text">$636.05</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">426-69-1256</td>
+    <td class="dark_text">Granville Pring</td>
+    <td class="dark_text">20-Feb-2020<br>
+        <span class="grey_text">5:59 PM</span>
+    </td>
+    <td class="grey_text">$201.78</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">216-99-2755</td>
+    <td class="dark_text">Deanne Sibbering</td>
+    <td class="dark_text">03-Apr-2020<br>
+        <span class="grey_text">9:39 PM</span>
+    </td>
+    <td class="grey_text">$372.53</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">761-30-2786</td>
+    <td class="dark_text">Marigold Bolter</td>
+    <td class="dark_text">15-Jan-2020<br>
+        <span class="grey_text">6:17 PM</span>
+    </td>
+    <td class="grey_text">$339.09</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">894-80-2204</td>
+    <td class="dark_text">Susanetta Kestell</td>
+    <td class="dark_text">29-Jul-2020<br>
+        <span class="grey_text">12:02 AM</span>
+    </td>
+    <td class="grey_text">$797.24</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">302-22-0454</td>
+    <td class="dark_text">Nataniel Brien</td>
+    <td class="dark_text">13-Apr-2020<br>
+        <span class="grey_text">4:02 AM</span>
+    </td>
+    <td class="grey_text">$393.8</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">770-30-5816</td>
+    <td class="dark_text">Maurie Ferier</td>
+    <td class="dark_text">05-Mar-2020<br>
+        <span class="grey_text">12:31 PM</span>
+    </td>
+    <td class="grey_text">$762.11</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">350-50-4687</td>
+    <td class="dark_text">Maddie Stepto</td>
+    <td class="dark_text">23-Jul-2020<br>
+        <span class="grey_text">1:09 PM</span>
+    </td>
+    <td class="grey_text">$671.21</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">559-98-2278</td>
+    <td class="dark_text">Gypsy Aslie</td>
+    <td class="dark_text">09-Sep-2020<br>
+        <span class="grey_text">11:38 PM</span>
+    </td>
+    <td class="grey_text">$867.63</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">422-31-0548</td>
+    <td class="dark_text">Joey Croke</td>
+    <td class="dark_text">18-Apr-2020<br>
+        <span class="grey_text">5:20 PM</span>
+    </td>
+    <td class="grey_text">$482.87</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">336-83-7289</td>
+    <td class="dark_text">Demott Gladyer</td>
+    <td class="dark_text">29-Jun-2020<br>
+        <span class="grey_text">5:28 AM</span>
+    </td>
+    <td class="grey_text">$236.49</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">396-02-0579</td>
+    <td class="dark_text">Averyl Brittles</td>
+    <td class="dark_text">22-Jun-2020<br>
+        <span class="grey_text">12:35 PM</span>
+    </td>
+    <td class="grey_text">$282.83</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">603-60-8547</td>
+    <td class="dark_text">Adelind Bartolomeo</td>
+    <td class="dark_text">22-Dec-2019<br>
+        <span class="grey_text">7:36 AM</span>
+    </td>
+    <td class="grey_text">$280.59</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">751-82-1357</td>
+    <td class="dark_text">Marchelle Alexsandrowicz</td>
+    <td class="dark_text">24-Oct-2020<br>
+        <span class="grey_text">7:33 PM</span>
+    </td>
+    <td class="grey_text">$479.38</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">186-88-8169</td>
+    <td class="dark_text">Anne-corinne McSweeney</td>
+    <td class="dark_text">02-Dec-2019<br>
+        <span class="grey_text">9:23 PM</span>
+    </td>
+    <td class="grey_text">$458.41</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">305-63-2666</td>
+    <td class="dark_text">Evan Uttridge</td>
+    <td class="dark_text">09-Mar-2020<br>
+        <span class="grey_text">6:05 AM</span>
+    </td>
+    <td class="grey_text">$580.28</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">839-12-6134</td>
+    <td class="dark_text">Brennen Twigger</td>
+    <td class="dark_text">14-Aug-2020<br>
+        <span class="grey_text">3:27 PM</span>
+    </td>
+    <td class="grey_text">$989.45</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">539-84-8329</td>
+    <td class="dark_text">Garwin Janusik</td>
+    <td class="dark_text">19-Mar-2020<br>
+        <span class="grey_text">5:51 AM</span>
+    </td>
+    <td class="grey_text">$415.59</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">727-53-1475</td>
+    <td class="dark_text">Siana Gornar</td>
+    <td class="dark_text">11-Apr-2020<br>
+        <span class="grey_text">5:48 PM</span>
+    </td>
+    <td class="grey_text">$262.99</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">337-59-1521</td>
+    <td class="dark_text">Keslie Reimer</td>
+    <td class="dark_text">18-May-2020<br>
+        <span class="grey_text">5:30 PM</span>
+    </td>
+    <td class="grey_text">$948.03</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">211-08-6867</td>
+    <td class="dark_text">Alfy Dur</td>
+    <td class="dark_text">21-Feb-2020<br>
+        <span class="grey_text">6:34 AM</span>
+    </td>
+    <td class="grey_text">$158.87</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">464-95-1584</td>
+    <td class="dark_text">Wilhelmine Malarkey</td>
+    <td class="dark_text">05-Aug-2020<br>
+        <span class="grey_text">11:31 AM</span>
+    </td>
+    <td class="grey_text">$793.46</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">808-73-1226</td>
+    <td class="dark_text">Burk Pearcy</td>
+    <td class="dark_text">18-Oct-2020<br>
+        <span class="grey_text">6:26 AM</span>
+    </td>
+    <td class="grey_text">$740.35</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">887-45-1549</td>
+    <td class="dark_text">Ty Deluze</td>
+    <td class="dark_text">18-Feb-2020<br>
+        <span class="grey_text">6:14 PM</span>
+    </td>
+    <td class="grey_text">$863.72</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">479-76-1363</td>
+    <td class="dark_text">Bette-ann Seakin</td>
+    <td class="dark_text">01-Jan-2020<br>
+        <span class="grey_text">4:31 PM</span>
+    </td>
+    <td class="grey_text">$179.24</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">767-14-6149</td>
+    <td class="dark_text">Moreen Robertshaw</td>
+    <td class="dark_text">29-Sep-2020<br>
+        <span class="grey_text">10:06 AM</span>
+    </td>
+    <td class="grey_text">$773.03</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">427-58-5623</td>
+    <td class="dark_text">Bent Trinbey</td>
+    <td class="dark_text">23-Nov-2020<br>
+        <span class="grey_text">6:33 AM</span>
+    </td>
+    <td class="grey_text">$973.58</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">589-03-9773</td>
+    <td class="dark_text">Chalmers Gittose</td>
+    <td class="dark_text">18-Sep-2020<br>
+        <span class="grey_text">8:49 PM</span>
+    </td>
+    <td class="grey_text">$220.19</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">579-79-3728</td>
+    <td class="dark_text">Constantin Cathesyed</td>
+    <td class="dark_text">10-Jan-2020<br>
+        <span class="grey_text">11:06 AM</span>
+    </td>
+    <td class="grey_text">$116.16</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">203-50-6192</td>
+    <td class="dark_text">Estele Kalinovich</td>
+    <td class="dark_text">18-Dec-2019<br>
+        <span class="grey_text">5:20 AM</span>
+    </td>
+    <td class="grey_text">$904.52</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">210-44-1532</td>
+    <td class="dark_text">Phyllys Hanlin</td>
+    <td class="dark_text">07-Sep-2020<br>
+        <span class="grey_text">8:29 PM</span>
+    </td>
+    <td class="grey_text">$814.13</td>
+    <td class="dark_text">Packed</td>
+</tr><tr>
+    <td class="grey_text">438-66-2351</td>
+    <td class="dark_text">Ardelle Orrah</td>
+    <td class="dark_text">30-Sep-2020<br>
+        <span class="grey_text">10:11 PM</span>
+    </td>
+    <td class="grey_text">$299.89</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">522-17-7024</td>
+    <td class="dark_text">Nat Wroe</td>
+    <td class="dark_text">20-Sep-2020<br>
+        <span class="grey_text">4:32 PM</span>
+    </td>
+    <td class="grey_text">$359.3</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">783-90-3909</td>
+    <td class="dark_text">Gray Whates</td>
+    <td class="dark_text">01-Mar-2020<br>
+        <span class="grey_text">5:13 PM</span>
+    </td>
+    <td class="grey_text">$966.84</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">729-04-7380</td>
+    <td class="dark_text">Lucinda Dunklee</td>
+    <td class="dark_text">28-Oct-2020<br>
+        <span class="grey_text">3:10 PM</span>
+    </td>
+    <td class="grey_text">$202.93</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">786-88-2577</td>
+    <td class="dark_text">Garwood Awty</td>
+    <td class="dark_text">07-Jun-2020<br>
+        <span class="grey_text">11:42 AM</span>
+    </td>
+    <td class="grey_text">$669.89</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">896-51-3277</td>
+    <td class="dark_text">Mindy Druhan</td>
+    <td class="dark_text">21-Mar-2020<br>
+        <span class="grey_text">7:16 AM</span>
+    </td>
+    <td class="grey_text">$407.83</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">753-72-5376</td>
+    <td class="dark_text">Marji Nattrass</td>
+    <td class="dark_text">05-Mar-2020<br>
+        <span class="grey_text">4:16 PM</span>
+    </td>
+    <td class="grey_text">$105.81</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">136-33-7778</td>
+    <td class="dark_text">Bordy Spofforth</td>
+    <td class="dark_text">13-Sep-2020<br>
+        <span class="grey_text">3:16 PM</span>
+    </td>
+    <td class="grey_text">$669.02</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">757-58-6997</td>
+    <td class="dark_text">Pennie Mazin</td>
+    <td class="dark_text">22-Jul-2020<br>
+        <span class="grey_text">2:47 AM</span>
+    </td>
+    <td class="grey_text">$628.56</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">366-88-6009</td>
+    <td class="dark_text">Nina Cartner</td>
+    <td class="dark_text">24-Jul-2020<br>
+        <span class="grey_text">2:35 AM</span>
+    </td>
+    <td class="grey_text">$157.29</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">873-48-1593</td>
+    <td class="dark_text">Aurelie Brandenburg</td>
+    <td class="dark_text">04-May-2020<br>
+        <span class="grey_text">7:19 AM</span>
+    </td>
+    <td class="grey_text">$885.1</td>
+    <td class="dark_text">New</td>
+</tr><tr>
+    <td class="grey_text">638-37-8801</td>
+    <td class="dark_text">Gerry Jollye</td>
+    <td class="dark_text">23-Feb-2020<br>
+        <span class="grey_text">1:01 AM</span>
+    </td>
+    <td class="grey_text">$655.03</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">843-01-3987</td>
+    <td class="dark_text">Wyatan Spancock</td>
+    <td class="dark_text">26-Aug-2020<br>
+        <span class="grey_text">11:27 PM</span>
+    </td>
+    <td class="grey_text">$221.19</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">453-13-4670</td>
+    <td class="dark_text">Clementius Petheridge</td>
+    <td class="dark_text">05-Dec-2019<br>
+        <span class="grey_text">11:45 PM</span>
+    </td>
+    <td class="grey_text">$141.97</td>
+    <td class="dark_text">Delivered</td>
+</tr><tr>
+    <td class="grey_text">259-06-5169</td>
+    <td class="dark_text">Krisha Weatherdon</td>
+    <td class="dark_text">26-Jul-2020<br>
+        <span class="grey_text">2:13 AM</span>
+    </td>
+    <td class="grey_text">$904.69</td>
+    <td class="dark_text">InTransit</td>
+</tr><tr>
+    <td class="grey_text">367-65-0070</td>
+    <td class="dark_text">Rees Pic</td>
+    <td class="dark_text">05-Sep-2020<br>
+        <span class="grey_text">9:19 PM</span>
+    </td>
+    <td class="grey_text">$999.23</td>
+    <td class="dark_text">Delivered</td>
+</tr></tbody>
+                
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script src="order.js"></script>
+  
+
+</body></html>

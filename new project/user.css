@@ -1,0 +1,106 @@
+.orders_container {
+    font-family: "Poppins",sans-serif;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.orders_container .title {
+    font-family: "Poppins",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+.search_wrapper {
+    margin-bottom: 30px;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+form {
+    width: 100%;
+}
+.search_wrapper .user_search_filed {
+    padding: 12px;
+    width: 40%;
+}
+[type=search] {
+    outline-offset: -2px;
+    -webkit-appearance: textfield;
+}
+button, input, select, textarea {
+    outline: none;
+    border: 0;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+* {
+    box-sizing: border-box;
+}
+.search_wrapper .search_submit, .search_wrapper .search_reset {
+    display: inline-block;
+    padding: 16px;
+    background-color: #20b883;
+    color: #fff;
+    margin-left: 10px;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+button, input, select, textarea {
+    outline: none;
+    border: 0;
+}
+#table th {
+    text-align: left;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#table .table_body td.dark_text {
+    color: "Poppins",sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+#table .table_body td {
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: 4px solid #f6f7fb;
+    padding: 14px 24px;
+}
+.navbar .nav .nav-link.active {
+    color: #20b883;
+}

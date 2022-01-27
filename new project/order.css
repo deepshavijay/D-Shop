@@ -1,0 +1,255 @@
+.navbar {
+    padding: 0px 40px;
+    box-shadow: 0 2px 4px #ccc;
+    background-color: #fff;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: middle;
+}
+* {
+    box-sizing: border-box;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.navbar .nav-wraper {
+    display: flex;
+    align-items: center;
+}
+.navbar .nav-wraper .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+}
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.d-inline-block {
+    display: inline-block!important;
+}
+.align-top {
+    vertical-align: top!important;
+}
+navbar .nav-wraper .navbar-brand span {
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    margin-left: 10px;
+}
+nav {
+    display: block;
+}
+body, form, input, option, select, textarea {
+    font-family: "Poppins",sans-serif;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+* {
+    box-sizing: border-box;
+}
+main {
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+* {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+main {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+
+.orders_container {
+    font-family: "Poppins",sans-serif;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+.orders_container .title {
+    font-family: "Poppins",sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+.col-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+.orders_container .filter_wraper h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.orders_container .filter_wraper>* {
+    margin-bottom: 20px;
+}
+.orders_container .filter_wraper>* {
+    margin-bottom: 20px;
+}
+orders_container .filter_wraper>* {
+    margin-bottom: 20px;
+}
+.orders_container .filter_wraper .filer_checkbox {
+    display: block;
+    margin-bottom: 15px;
+}
+.orders_container .filter_wraper .filer_checkbox input {
+    margin-right: 12px;
+}
+button, input, select, textarea {
+    outline: none;
+    border: 0;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+* {
+    box-sizing: border-box;
+}
+.col-10 {
+    flex: 0 0 auto;
+    width: 83.33333333%;
+}
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+element.style {
+    width: 100%;
+}
+#table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+#table th {
+    text-align: left;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+}
+#table .table_body td.grey_text {
+    color: #8c8c8c;
+}
+#table .table_body td {
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: 4px solid #f6f7fb;
+    padding: 14px 24px;
+}
+#table .table_body td.dark_text {
+    color: "Poppins",sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+}
+#table .table_body td {
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: 4px solid #f6f7fb;
+    padding: 14px 24px;
+}
+#table .table_body td .grey_text {
+    color: #8c8c8c;
+}
+.navbar .nav .nav-link {
+    font-size: 15px;
+    font-family: "Poppins",sans-serif;
+    color: #333;
+    padding: 25px 15px;
+    font-weight: 500;
+}
+.navbar .nav .nav-link.active {
+    color: #20b883;
+}

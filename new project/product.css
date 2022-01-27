@@ -1,0 +1,13 @@
+#table .product_body td.id {
+    color: #8c8c8c;
+    line-height: 1.5;
+}
+#table .product_body td {
+    font-size: 14px;
+    background-color: #fff;
+    border-bottom: 4px solid #f6f7fb;
+    padding: 14px 24px;
+}
+.navbar .nav .nav-link.active {
+    color: #20b883;
+}
